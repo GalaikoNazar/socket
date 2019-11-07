@@ -1,0 +1,9 @@
+.messages-list .list-group .list-group-item {
+  margin-bottom: 15px;
+}
+.messages-list .list-group {
+  overflow: auto;
+  height: 70vh;
+  display: block;
+  margin: auto;
+}
