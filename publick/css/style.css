@@ -7,3 +7,27 @@
   display: block;
   margin: auto;
 }
+html, body {
+  background: #747070 !important;
+}
+
+.my-form {
+  display: block;
+  width: 100%;
+  max-width: 430px;
+  border:1px solid silver;
+  padding: 20px;
+  background: silver;
+  margin: 20px;
+}
+.my-form .btn {
+  width: 100%;
+}
+.my-form input {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  height: 35px;
+  border:1px solid silver;
+  margin-bottom: 20px;
+}

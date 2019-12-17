@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"
+    integrity="sha256-OgiHfllOBEOiWQ2OcBsDncRG2k7QBW9Rs1dB7MH2N2s=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Dashboard</h1>
+
+    <form action="/dashboard/upload" method="POST" class="my-form" enctype="multipart/form-data">
+        <input type="text" name="nameOffer"  placeholder="Назва товару"/>
+        <input type="number" name="offerLenght"  placeholder="Кількість товару"/>
+        <input type="text" name="auther"  placeholder="Власник товару"/>
+        <input type="file" name="filedata"  placeholder="Фото товару"/>
+        <button class="btn btn-primary">save</button>
+    </form>
+
+
+    <!-- <script src="js/script00.js"></script> -->
+
+    <script>
+        let token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibmF6YXIiLCJlbWFpbCI6Im5hemFyZ2FsYWlrb0BnbWFpbC5jb20ifSwiaWF0IjoxNTc0MTYwNDcxLCJleHAiOjE1NzQ0MTk2NzF9.Zj5ht2G48saPcETynT-V5mrDZaYM-eo45qqNVo5Lf9E';
+
+        fetch('http://localhost:4000/api',{ 
+         method: 'get', 
+         headers:{
+            'Authorization': token, 
+            "Access-Control-Allow-Origin": "*",
+            'Content-Type': 'application/x-www-form-urlencoded',
+        }, })
+        .then(response => response.json())
+        .then(json => console.log(json))
+    </script>
+</script>
+</body>
+
+</html>
